@@ -28,13 +28,11 @@ namespace Lab1.Tests
         }
 
         [TestMethod()]
-        public void YakobiTest()
+        public void MultMatrixTest()
         {
-            //double.TryParse("aa", out double value);
-            double[,] matrix = new double[,] { { 2, 3, 4 }, { 3, 2, 6 }, { 0, 6, 5 } };
-            double[,] resultMatrix = new double[2, 2];
-            double[,] vectors = new double[2, 2];
-            _matrix.Yakobi(matrix, 0.001, out resultMatrix, out vectors);
+            double[,] matrixB = new double[,] { { 2, 3, 4 }, { 3, 2, 6 }, { 0, 6, 5 } };
+            double[,] matrixA = new double[,] { { 2, 3, 6, 6, 2 }, { 2, 2, 2, 2, 2 }, { 0, 3, 5, 1, 5 }, { 0, 3, 5, 8, 9 } };
+            _matrix.MultMatrix(matrixA, matrixB);
         }
     }
 }
